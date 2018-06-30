@@ -5,6 +5,13 @@
  * @returns {string}
  */
 function showSalary(data, age) {
+	let string= '';
+	for (const item of data) {
+		if (item.age <= age) {
+			string += `${item.name}, ${item.balance}\n`;
+		}
+	}
+	return string.replace(/\n$/, '');
 }
 
 
